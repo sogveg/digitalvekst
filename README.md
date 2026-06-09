@@ -1,2 +1,0 @@
-# digitalvekst
-markedsføringsside
