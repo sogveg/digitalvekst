@@ -73,6 +73,15 @@ const projects = [
     url: "https://www.renrute.no",
   },
   {
+    title: "Fana Bilpleie",
+    description: "Profesjonell nettside for Bergens beste bilpleie. Bilvask, keramisk coating og båtpleie — med online booking, gratis lånebil og henting/levering.",
+    category: "Web + Booking",
+    tags: ["Bilpleie", "Båt", "Booking", "Bergen", "Lead-generering", "Mobiloptimalisert", "Google My Business"],
+    image: "/projects/fana-bilpleie.png",
+    results: "4,6 ⭐ på Google",
+    url: "https://www.fanabilpleie.no",
+  },
+  {
     title: "Noen Ord",
     description: "Personlig taleskriving — hjelper folk å sette ord på det de føler. AI-assistert talegenerator med personlige spørsmål og skreddersydde utkast.",
     category: "Web + AI",
