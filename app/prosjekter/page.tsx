@@ -95,7 +95,7 @@ const projects = [
     description: "Nettbutikk for håndlagde babyleker, scrunchies og kroner av gjenbrukte tekstiler. Hvert produkt er unikt — laget av Ella selv.",
     category: "E-handel",
     tags: ["Nettbutikk", "Håndlaget", "Bærekraft", "Mobiloptimalisert", "Artikler", "Bestilling"],
-    image: "/projects/ellas-skatter.png",
+    image: "/projects/ellas-skatter.webp",
     results: "Gratis frakt over 450 kr",
     url: "https://www.ellasskatter.no",
   },
