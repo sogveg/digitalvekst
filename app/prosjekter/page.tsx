@@ -79,7 +79,7 @@ const projects = [
     tags: ["Bilpleie", "Båt", "Booking", "Bergen", "Lead-generering", "Mobiloptimalisert", "Google My Business"],
     image: "/projects/fana-bilpleie.png",
     results: "4,6 ⭐ på Google",
-    url: "https://www.fanabilpleie.no",
+    url: "https://fana-bilpleie.vercel.app",
   },
   {
     title: "Noen Ord",
