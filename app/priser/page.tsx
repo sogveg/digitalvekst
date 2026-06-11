@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Check, X } from "lucide-react"
-import { getServiceSchema } from "@/lib/structured-data"
+import { getServiceSchema, getBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Priser | Nettside fra kr 3 990,- eks mva",
@@ -81,7 +81,56 @@ export default function PriserPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getServiceSchema()),
+          __html: JSON.stringify([
+            getServiceSchema(),
+            getBreadcrumbSchema([
+              { name: "Hjem", url: "https://www.digitalvekst.no" },
+              { name: "Priser", url: "https://www.digitalvekst.no/priser" },
+            ]),
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Nettsidepakker – Digital Vekst",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  item: {
+                    "@type": "Offer",
+                    name: "Start",
+                    description: "For deg som trenger en enkel, profesjonell nettside raskt og effektivt. Opptil 4 sider.",
+                    price: "3990",
+                    priceCurrency: "NOK",
+                    seller: { "@type": "Organization", name: "Digital Vekst" },
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  item: {
+                    "@type": "Offer",
+                    name: "Pro",
+                    description: "Komplett nettløsning med 5-8 sider og konverteringsstruktur.",
+                    price: "5990",
+                    priceCurrency: "NOK",
+                    seller: { "@type": "Organization", name: "Digital Vekst" },
+                  },
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  item: {
+                    "@type": "Offer",
+                    name: "Drift",
+                    description: "Månedlig driftsavtale med hosting, backup og support.",
+                    price: "990",
+                    priceCurrency: "NOK",
+                    seller: { "@type": "Organization", name: "Digital Vekst" },
+                  },
+                },
+              ],
+            },
+          ]),
         }}
       />
       {/* Hero */}

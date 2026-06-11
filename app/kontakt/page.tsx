@@ -121,6 +121,8 @@ export default function KontaktPage() {
                 <div className="text-sm text-muted-foreground space-y-2">
                   <p>E-post: post@digitalvekst.no</p>
                   <p>Telefon: 911 35 991</p>
+                  <p>Sted: Bergen, Norge</p>
+                  <p>Org.nr: 920 241 255</p>
                 </div>
               </div>
             </div>

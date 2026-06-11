@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Digital Vekst | Webbyrå som skaper vekst',
     description: 'Vi bygger nettsider med struktur som konverterer. Start fra 14 990,- eks mva.',
+    images: ['https://www.digitalvekst.no/og-image.png'],
   },
   robots: {
     index: true,
