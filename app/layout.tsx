@@ -32,6 +32,14 @@ export const metadata: Metadata = {
     siteName: 'Digital Vekst',
     title: 'Digital Vekst | Webbyrå som skaper vekst for norske bedrifter',
     description: 'Vi bygger nettsider med struktur som konverterer. Design, SEO og synlighet for din bedrift. Start fra 14 990,- eks mva.',
+    images: [
+      {
+        url: 'https://www.digitalvekst.no/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Digital Vekst – Webbyrå for norske bedrifter',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

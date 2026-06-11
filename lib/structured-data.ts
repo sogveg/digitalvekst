@@ -6,13 +6,15 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     name: "Digital Vekst",
     url: BASE_URL,
-    logo: `${BASE_URL}/logo.png`,
+    logo: `${BASE_URL}/icon-light-32x32.png`,
     description:
       "Vi bygger nettsider med struktur som konverterer. Design, SEO og synlighet for din bedrift.",
     email: "post@digitalvekst.no",
     telephone: "+4791135991",
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Bergen",
+      addressRegion: "Vestland",
       addressCountry: "NO",
     },
     sameAs: [],
@@ -47,6 +49,8 @@ export function getLocalBusinessSchema() {
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
+      addressLocality: "Bergen",
+      addressRegion: "Vestland",
       addressCountry: "NO",
     },
     openingHoursSpecification: {
@@ -54,11 +58,6 @@ export function getLocalBusinessSchema() {
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       opens: "09:00",
       closes: "17:00",
-    },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5",
-      reviewCount: "10",
     },
   }
 }

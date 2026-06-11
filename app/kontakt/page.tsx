@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { ContactForm } from "@/components/contact-form"
 import { Calendar, Mail, Clock } from "lucide-react"
+import { getLocalBusinessSchema, getBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Kontakt oss | Book et gratis møte",
@@ -18,6 +19,18 @@ export const metadata: Metadata = {
 export default function KontaktPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            getLocalBusinessSchema(),
+            getBreadcrumbSchema([
+              { name: "Hjem", url: "https://www.digitalvekst.no" },
+              { name: "Kontakt", url: "https://www.digitalvekst.no/kontakt" },
+            ]),
+          ]),
+        }}
+      />
       {/* Hero */}
       <section className="py-20 sm:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

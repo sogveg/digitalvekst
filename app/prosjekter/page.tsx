@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, ExternalLink } from "lucide-react"
+import { getBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Prosjekter | Nettsider vi har levert",
@@ -113,6 +114,17 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            getBreadcrumbSchema([
+              { name: "Hjem", url: "https://www.digitalvekst.no" },
+              { name: "Prosjekter", url: "https://www.digitalvekst.no/prosjekter" },
+            ])
+          ),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 max-w-4xl text-center">

@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { LayoutGrid, Eye, TrendingUp } from "lucide-react"
+import { getOrganizationSchema, getBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Om oss | Webbyrå med fokus på resultater",
@@ -37,6 +38,18 @@ const values = [
 export default function OmOssPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            getOrganizationSchema(),
+            getBreadcrumbSchema([
+              { name: "Hjem", url: "https://www.digitalvekst.no" },
+              { name: "Om oss", url: "https://www.digitalvekst.no/om-oss" },
+            ]),
+          ]),
+        }}
+      />
       {/* Hero */}
       <section className="py-20 sm:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

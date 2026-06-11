@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Globe, BarChart3, MapPin, Facebook, Search } from "lucide-react"
+import { getServiceSchema, getBreadcrumbSchema } from "@/lib/structured-data"
 
 export const metadata: Metadata = {
   title: "Tjenester | Nettside, SEO, Google Business og mer",
@@ -77,6 +78,18 @@ const services = [
 export default function TjenesterPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            getServiceSchema(),
+            getBreadcrumbSchema([
+              { name: "Hjem", url: "https://www.digitalvekst.no" },
+              { name: "Tjenester", url: "https://www.digitalvekst.no/tjenester" },
+            ]),
+          ]),
+        }}
+      />
       {/* Hero */}
       <section className="py-20 sm:py-24 bg-background">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
